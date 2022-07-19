@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+body {
+  height: 1500px;
+}
+
+.article {
+  border: 1px solid #ccc;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+/* combinado */
+/* article.article {
+  background-color: pink;
+}
+
+p.paragraph {
+  color: red;
+} */
+
+/* Descendiente */
+
+article.article p {
+}
+
+article.article footer.article__footer a {
+}
+
+/* adyencente +
+Selecciona la primer hermano inmediato
+
+*/
+
+article.article + section {
+  background-color: red;
+}
+
+/* hermanos inmediatos
+ ~
+*/
+
+article.article ~ section {
+  background-color: purple;
+  color: white;
+}
+
+/* hijo >
+Hijos directos
+*/
+
+.article > p {
+  background-color: yellow;
+}
+
+/* 
+Selectores
+
+*/
+
+/* combinado */
+header.header {
+}
+
+/* 
+Hijo directo
+Un elemento section.introduccion
+que sea hijo directo de  nav.links
+*/
+nav.links > section.introduction {
+}
+
+/* 
+Descendiente
+*/
+header.header .introduction p {
+}
+
+/* Hijo directo */
+.introduction > p {
+}
+
+/* Todos los Hermanos directos  */
+nav.links ~ section {
+}
+
+/* Adyacente */
+nav.link + section.introduction {
+}
+
+/* 
+Pseudoclases:
+
+:hover -> cuando colocamos el cursos sobre el elemento
+:link -> enlace no han sido visitados
+:visited -> cuando ya ha sido visitado
+:focus
+:active
+:disabled -> 
+:checked -> radios, checkbobx
+:submit
+
+*/
+
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: green;
+}
+
+/* .square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+} */
+
+.square:hover + .circle {
+  display: block;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: tomato;
+  display: none;
+}
+
+/* 
+:first-child
+:last-child
+:nth-child()
+
+:first-of-type
+:last-of-type
+:nth-of-type()
+
+:not()
+
+*/
+.container {
+  border: 1px solid green;
+}
+
+.container .square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.container section.square {
+  border: 2px dotted green;
+}
+
+/* .container .square:first-child {
+  background-color: pink;
+}
+
+.container .square:last-child {
+  background-color: cyan;
+} */
+
+/* even - Pares */
+/* odd - Impares */
+/* numero - un lemento especifico */
+/* patron -> An + B  */
+/* .container .square:nth-child(3n + 4) { */
+/* 4, 7, 10, 13 */
+/* background-color: purple;
+} */
+
+/* .container section.square:first-of-type {
+  background-color: peru;
+}
+
+.container .square:last-of-type {
+  background-color: red;
+} */
+
+/* An + B */
+/* .container div.square:nth-of-type(4n + 2) { */
+/* 2, 6, 10, 14 */
+/* background-color: red;
+} */
+
+.container .square:not(:nth-child(even)) {
+  background-color: red;
+}
+/* :hover */
+
+/* pseudoelementos 
+
+::before
+::after
+::first-letter
+::first-line
+
+*/
+
+.parrafo::first-letter {
+  font-size: 50px;
+}
+
+.parrafo::first-line {
+  color: red;
+}

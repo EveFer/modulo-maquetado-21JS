@@ -1,0 +1,114 @@
+/* selector Universal */
+
+* {
+  color: red;
+}
+
+/* selector por tagname */
+h2 {
+  color: green;
+}
+
+/* selector por clase */
+
+.my-color {
+  color: purple;
+}
+
+/* Por id */
+#title-main {
+  color: black;
+  background-color: yellow;
+}
+
+.my-color {
+  /* font-size: 30px; */
+  color: red;
+}
+
+/* 
+* (universal) -> 000
+tagname ->   001
+.class ->    010
+#id -->      100
+style inline -> 1000
+
+*/
+
+/* Cascada */
+
+/* 
+Sobreescribir los ultimos estilos ya declarados
+
+Se aplicarán cuando uno o más selectores
+tengan las misma especicifidad.
+*/
+
+/* 
+Herencia:
+
+Los estilos que apliquemos a elementos padre
+se apliquen a sus elementos hijos.
+*/
+
+body {
+  font-size: 30px;
+  font-family: Arial;
+  /* border: 1px solid black; */
+  color: gray;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.square {
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  color: black;
+  /* height: 150px; */
+  /* max-width: 500px;
+  min-width: 300px; */
+  /* max-height: 1000px;
+  min-height: 500px; */
+  /* padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px; */
+
+  /* shorthand */
+  /* padding: top right bottom left; */
+  padding: 20px 30px 20px 50px;
+  padding: 40px 15px 40px 15px;
+  padding: 50px 100px;
+  padding: 20px;
+
+  border-width: 30px;
+  /* solido, dotted, dashed
+  double */
+  border-style: solid;
+  border-color: purple;
+
+  /* margin */
+  /* margin-top: 50px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  margin-left: 100px; */
+
+  /* margin: top right bottom left; */
+  /* margin: 50px 50px 50px 50px;
+  margin: 100px 20px;
+  margin: 50px; */
+
+  /* margin: auto */
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+
+  /* 
+  Aplicar auto a margin;
+  - Elemento block
+  - width definido
+  */
+}

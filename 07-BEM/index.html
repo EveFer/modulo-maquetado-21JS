@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- BEM (Block, Element, Modifier) 
+    Metodologia CSS
+    - Código Modular
+    - Código limpio
+    - Mantiene la especicifidad al minimo
+
+
+    
+    -->
+
+    <!-- 
+      Block (Bloque)
+
+     -->
+
+    <header class="header"></header>
+    <nav class="nav"></nav>
+    <form action="" class="form"></form>
+    <section class="container"></section>
+    <article class="card"></article>
+
+    <!-- Elemntos
+      
+      nombrarlo:
+      [block_name]__[element_name]
+    -->
+
+    <nav class="nav">
+      <a href="" class="nav__link">Inicio</a>
+      <a href="" class="nav__link">Nosotros</a>
+    </nav>
+
+    <form action="" class="form">
+      <input type="text" name="" id="" class="form__input" />
+      <button class="form__button">Enviar</button>
+    </form>
+
+    <form action="" class="form form--blue">
+      <input type="text" name="" id="" class="form__input" />
+      <button class="form__button">Enviar</button>
+    </form>
+
+    <!-- 
+      Modificadores
+      nomenclatura:
+      [block_or_element_name]--[modificador]
+     -->
+
+    <nav class="nav">
+      <a href="" class="nav__link">Inicio</a>
+      <a href="" class="nav__link nav__link--disabled">Nosotros</a>
+    </nav>
+
+    <header class="header header--color-blue"></header>
+    <header class="header header--color-gray"></header>
+    <header class="header header--color-orange"></header>
+
+    <!-- Card con BEM -->
+
+    <article class="card">
+      <!--Block-->
+      <h2 class="card__title">Order Summary</h2>
+      <p class="card__paragraph">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus non
+        accusamus, harum repellat corrupti excepturi?
+      </p>
+
+      <section class="card__plan">
+        <img class="card__icon" src="" alt="" />
+        <div class="card__info">
+          <p class="card__text card__text--bold">Annual Plan</p>
+          <p class="card__text">$59.99/year</p>
+        </div>
+        <a class="card__change" href="">Change</a>
+      </section>
+      <button class="button button--payment">Proceed to Payment</button>
+      <!--block-->
+      <button class="button button--cancel">Cancel Order</button
+      ><!--block-->
+    </article>
+  </body>
+</html>

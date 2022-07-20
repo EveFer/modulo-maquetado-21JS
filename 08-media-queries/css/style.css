@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* 
+Mobile First
+*/
+
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  margin: 0 auto;
+}
+
+/* tablet */
+/* >= 768px min-width */
+
+/* <= 768px max-width */
+@media all and (min-width: 768px) {
+  .square {
+    background-color: red;
+  }
+}
+
+/* >= 1024px */
+
+@media (min-width: 1024px) and (orientation: portrait) {
+  .square {
+    background-color: purple;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+}

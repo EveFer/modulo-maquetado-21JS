@@ -18,15 +18,21 @@ Mobile First
 /* >= 768px min-width */
 
 /* <= 768px max-width */
-@media all and (min-width: 768px) {
+@media all and (min-width: 768px) and (orientation: landscape) {
   .square {
     background-color: red;
   }
 }
 
+@media all and (min-width: 768px) and (orientation: portrait) {
+  .square {
+    background-color: green;
+  }
+}
+
 /* >= 1024px */
 
-@media (min-width: 1024px) and (orientation: portrait) {
+@media (min-width: 1024px) and (orientation: landscape) {
   .square {
     background-color: purple;
     border-radius: 50%;
@@ -34,4 +40,12 @@ Mobile First
 }
 
 @media (min-width: 1440px) {
+  /* Reglas CSS */
+}
+
+@media print {
+  .square {
+    background-color: royalblue;
+    border: 2px solid black;
+  }
 }

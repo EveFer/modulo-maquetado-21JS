@@ -4,14 +4,13 @@
 }
 
 .flex-container {
-  width: 600px;
-  max-width: 800px;
+  width: 400px;
   height: 600px;
   margin: 80px auto;
   outline: 3px solid #000;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 
   /* Eje principal */
   /* justify-content: center;
@@ -27,7 +26,7 @@
   align-items: flex-end;
   align-items: center;
   align-items: baseline; */
-  align-items: flex-start;
+  /* align-items: baseline; */
 
   /* 
   row: eje principal de izquierda a derecha
@@ -44,20 +43,102 @@
   pero ahora al eje secundario
    flex-wrap: wrap;
   */
-  align-content: flex-end;
-  align-content: center;
-  align-content: space-between;
-  align-content: space-around;
-  align-content: space-evenly;
 }
 
+/* 
+
+
+Flex-container:
+  - display: flex;
+  - flex-direction: row;
+  - flex-wrap: nowrap;
+  - justify-content:
+  - align-items: flex-start;
+  - flex-flow: direction wrap;
+*/
+
+/* 
+  flex-items
+  - order
+  
+  - flex-grow - respecto al espacio dispnible
+  - flex-shrink - respecto al espacio faltante
+  - align-self
+*/
+
 .flex-item {
-  width: 100px;
+  width: 200px;
   height: 100px;
   color: #fff;
   text-align: center;
   font-size: 25px;
 }
+
+.item-1 {
+  /* font-size: 100px; */
+  order: 0;
+  /* flex-grow: 1; */
+
+  /* 
+    100px(disponibles) / 1 = 100px
+
+    1º 100px + 100px = 200px;
+
+
+    100px (disponible) / 3 = 33.33px
+
+    1º 100px + 33.33px = 133.33.px
+    2º 100px + 33.33px = 133.33.px
+    3º 100px + 33.33px = 133.33.px
+   
+  */
+
+  flex-shrink: 1;
+
+  /* 
+  200px(faltante) / 3 = 66.66px
+  1º 200px - 66.66px = 133.34px
+  2º 200px - 66.66px = 133.34px
+  3º 200px - 66.66px = 133.34px
+
+  */
+
+  /* align-self: flex-end; */
+  /* eje secundario */
+}
+.item-2 {
+  order: 0;
+  /* flex-grow: 2; */
+
+  /* 
+  
+  100px(disponible) / 4 = 25px;
+  1º 100px(medida) + 25 = 125px;
+  2º 100px(medida) + 50 = 150px;
+  3º 100px(medida) + 25 = 125px;
+  */
+  flex-shrink: 1;
+  /* 
+    200px (faltante) / 4 = 50px
+    1º 200px - 50px = 150px
+    2º 200px - 100px = 100px
+    3º 200px - 50px = 150px
+
+  */
+}
+
+.item-3 {
+  order: 0;
+  /* flex-grow: 1; */
+
+  flex-shrink: 1;
+}
+
+/* 
+Espacio disponible/sobrante
+
+Espacio faltante:
+*/
 
 .flex-item:nth-child(even) {
   background-color: crimson;

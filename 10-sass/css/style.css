@@ -27,10 +27,19 @@ body {
   color: hotpink;
 }
 
+.card {
+  padding: 15px;
+}
 .card__title {
   color: hotpink;
 }
 .card__title--bold {
+  font-weight: bold;
+}
+.card__title:hover {
+  color: red;
+}
+.card__title span:first-child {
   font-weight: bold;
 }
 .card__paragraph {
@@ -42,4 +51,40 @@ body {
 }
 .button:hover {
   background-color: red;
+}
+
+.article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  background-image: url("./images/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+  }
+}
+
+.nav {
+  padding: 16px;
+}
+.nav__links {
+  color: hotpink;
 }/*# sourceMappingURL=style.css.map */

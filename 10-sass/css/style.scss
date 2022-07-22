@@ -1,64 +1,7 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
+// @import './variables';
+// @import './mixins';
+// @import './base';
 
-$primary: hotpink;
-$secondary: red;
-
-body {
-    background-color: $primary;
-}
-
-.header {
-    background-color: $primary;
-}
-
-.nav {
-    background-color: $primary;
-}
-
-.header h2 {
-    color: $primary;
-}
-
-// nesting
-
-.header {
-
-    h2 {
-        color: $primary;
-    }
-}
-
-.card {
-
-    .card__title {
-        color: $primary;
-    }
-}
-
-.card {
-
-    &__title {
-        color: $primary;
-
-        &--bold{
-            font-weight: bold;
-        }
-    }
-
-    &__paragraph {
-        color: $secondary;
-    }
-}
-
-.button {
-    background-color: $primary;
-
-    &:hover {
-        background-color: $secondary;
-    }
-}
-
+@use './base';
+@use './home/nav';
 

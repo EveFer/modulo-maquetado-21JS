@@ -1,0 +1,94 @@
+@use './variables';
+@use './mixins';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: variables.$primary;
+    
+}
+
+.header {
+    background-color: variables.$primary;
+}
+
+.nav {
+    background-color: variables.$primary;
+}
+
+.header h2 {
+    color: variables.$primary;
+}
+
+
+
+// nesting
+
+.header {
+
+    h2 {
+        color: variables.$primary;
+    }
+}
+
+.card {
+
+    .card__title {
+        color: variables.$primary;
+    }
+}
+
+.card {
+    padding: 15px;
+    &__title {
+        color: variables.$primary;
+
+        &--bold{
+            font-weight: bold;
+        }
+
+        &:hover {
+            color: variables.$secondary;
+        }
+
+        span:first-child {
+            font-weight: bold;
+        }
+    }
+
+    &__paragraph {
+        color: variables.$secondary;
+    }
+}
+
+.button {
+    background-color: variables.$primary;
+
+    &:hover {
+        background-color: variables.$secondary;
+    }
+}
+
+.article {
+    @include mixins.center;
+}
+
+.footer {
+    @include mixins.center;
+}
+
+.hero {
+    @include mixins.bg-img('./images/hero.png', cover, bottom)
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.responsive("medium") {
+        flex-direction: row;
+    }
+}

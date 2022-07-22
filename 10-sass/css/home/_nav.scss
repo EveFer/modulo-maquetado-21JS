@@ -1,0 +1,9 @@
+@use '../variables';
+
+.nav {
+    padding: 16px;
+
+    &__links {
+        color: variables.$primary;
+    }
+}

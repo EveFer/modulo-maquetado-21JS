@@ -1,0 +1,34 @@
+@use './variables';
+
+// mixins
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// 
+@mixin bg-img($url_img, $bg-size, $bg-position: top) {
+    background-image: url($url_img);
+    background-repeat: no-repeat;
+    background-size: $bg-size;
+    background-position: $bg-position;
+}
+
+@mixin responsive ($breakpoint) {
+    @if ($breakpoint == "medium") {
+        @media screen and (min-width: variables.$medium) {
+            @content;
+        }
+    }
+    @if($breakpoint == "large") {
+        @media screen and (min-width: variables.$large) {
+            @content;
+        }
+    }
+    @if($breakpoint == "extra-large") {
+        @media screen and (min-width: variables.$extra-large) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+
+.element {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin: 60px;
+
+    &--transform {
+        // transform: translateX(100%) translateY(100%);
+        // transform: translate(100px, 200px);
+        // transform: rotate(60deg)
+        // valores angulares
+        // 0 - 360 deg
+        // 0 - 400 grad
+        // 0 - 6.28 rad
+        // 
+
+        // transform: scale(1);
+        // transform: skewY(45deg)
+        // valores angular
+
+        transform: translate(200px) rotate(30deg) scale(1.2);
+    }
+
+    &--transition {
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+        // transition-property: background-color;
+        // transition-duration: 1000ms;
+        // // transition-delay: 2s;
+        // transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+
+        // // transition: background-color 100ms, opacity 2s;
+        // transition: background-color 100ms;
+        transition: transform 2s, background-color 2s;
+
+        &:hover {
+            background-color: cyan;
+            transform: scale(1.2);
+        }
+    }
+
+    &--animation {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        animation-name: mover;
+        animation-duration: 3s;
+        animation-iteration-count: 2;
+        animation-delay: 5s;
+        animation-play-state: running;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        /*
+        1º Fotograma | keyframe
+        - DEfinir un ciclo en la animacion
+
+        @keyframe <name> {
+            puntos
+        }
+
+
+        2º Aplicacion de las propiedades de animacion a un elemento
+        animation-name
+        animation-duration
+        animation-timing-function
+        animation-iteration-count
+        animation-direction
+        animation-delay
+        animation-play-state
+        */
+
+        @keyframes cambiar-color {
+            from {
+                background-color: crimson;
+            }
+            to {
+                background-color: hotpink;
+            }
+        }
+
+        @keyframes mover {
+            0% {
+                transform: translate(0);
+            }
+            25% {
+                transform: translate(100%);
+            }
+            50% {
+                transform: translate(100%, 100%);
+            }
+            75% {
+                transform: translate(0, 100%);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+    }
+}
+
+// transform
+/*
+    - translateX()
+    - translateY()
+    - translate(x, y)
+    - translate(x)
+
+    - scalar | transladar | rotar | sesgar
+
+
+
+*/
+

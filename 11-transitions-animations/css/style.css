@@ -1,0 +1,124 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.element {
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  margin: 60px;
+}
+.element--transform {
+  transform: translate(200px) rotate(30deg) scale(1.2);
+}
+.element--transition {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  transition: transform 2s, background-color 2s;
+}
+.element--transition:hover {
+  background-color: cyan;
+  transform: scale(1.2);
+}
+.element--animation {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-animation-name: mover;
+          animation-name: mover;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  /*
+  1º Fotograma | keyframe
+  - DEfinir un ciclo en la animacion
+
+  @keyframe <name> {
+      puntos
+  }
+
+
+  2º Aplicacion de las propiedades de animacion a un elemento
+  animation-name
+  animation-duration
+  animation-timing-function
+  animation-iteration-count
+  animation-direction
+  animation-delay
+  animation-play-state
+  */
+}
+.element--animation:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+@-webkit-keyframes cambiar-color {
+  from {
+    background-color: crimson;
+  }
+  to {
+    background-color: hotpink;
+  }
+}
+@keyframes cambiar-color {
+  from {
+    background-color: crimson;
+  }
+  to {
+    background-color: hotpink;
+  }
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(100%);
+  }
+  50% {
+    transform: translate(100%, 100%);
+  }
+  75% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(100%);
+  }
+  50% {
+    transform: translate(100%, 100%);
+  }
+  75% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/*
+    - translateX()
+    - translateY()
+    - translate(x, y)
+    - translate(x)
+
+    - scalar | transladar | rotar | sesgar
+
+
+
+*//*# sourceMappingURL=style.css.map */
